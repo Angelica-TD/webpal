@@ -1,0 +1,8 @@
+.card-img, .card-img-top {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.btn.add-to-cart{
+    width: fit-content;
+}

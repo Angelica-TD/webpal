@@ -1,1 +1,5 @@
-- api request to get product images
+- [DONE] api request to get product images
+
+2/12
+- add single product page
+- add 'add to cart'
