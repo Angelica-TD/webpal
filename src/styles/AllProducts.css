@@ -1,8 +1,53 @@
-.card-img, .card-img-top {
+.card{
+    /* OVERRIDE BOOTSTRAP VARIABLES: BEGIN */
+    --bs-card-border-color: rgb(0 0 0 / 5%);
+    /* OVERRIDE BOOTSTRAP VARIABLES: END */
+}
+
+.card-top,
+.card-img,
+.card-img-top,
+.more-details-overlay {
     max-height: 250px;
     object-fit: contain;
 }
 
-.btn.add-to-cart{
+.btn.add-to-cart {
     width: fit-content;
+}
+
+.card-top{
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-top:hover img {
+    transform: scale(1.2);
+}
+
+.more-details-overlay{
+    /* background-color: #4a4a4a96; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-top:hover .more-details-overlay{
+    opacity: 1;
+}
+
+.more-details-overlay .btn:hover {
+    color: #ffffff;
+    background-color: #ffffff47;
+    border-color: #ffffff;
 }

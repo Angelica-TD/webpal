@@ -3,3 +3,6 @@
 2/12
 - add single product page
 - add 'add to cart'
+
+3/12
+- [DONE] add 'more details' overlay on hover and show modal when button clicked
