@@ -6,3 +6,6 @@
 
 3/12
 - [DONE] add 'more details' overlay on hover and show modal when button clicked
+
+9/12
+- [DONE] add product image carousel
