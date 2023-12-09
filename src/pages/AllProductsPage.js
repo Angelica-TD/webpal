@@ -14,10 +14,10 @@ const AllProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://api.webpal/products');
+        const response = await axios.get('http://localhost:3001/products');
         const productsWithImages = await Promise.all(
           response.data.map(async (product) => {
-            const imageResponse = await axios.get(`http://api.webpal/products/${product.product_code}/images`);
+            const imageResponse = await axios.get(`http://localhost:3001/products/${product.product_code}/images`);
 
             if (imageResponse.data && imageResponse.data.length > 0) {
               return { ...product, image_urls: imageResponse.data.map(image => image.image_name) };
@@ -47,7 +47,7 @@ const AllProducts = () => {
               {product.image_urls && product.image_urls.length > 0 && (
                 <div className="card-top">
                   <img
-                    src={`http://admin.webpal/uploads/${product.image_urls[0]}`}
+                    src={`http://localhost:3000/uploads/${product.image_urls[0]}`}
                     className="card-img-top" alt={`${product.name}`} />
 
                   

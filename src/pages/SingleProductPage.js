@@ -7,10 +7,10 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://api.webpal/products');
+        const response = await axios.get('http://localhost:3001/products');
         const productsWithImages = await Promise.all(
           response.data.map(async (product) => {
-            const imageResponse = await axios.get(`http://api.webpal/products/${product.product_code}/images`);
+            const imageResponse = await axios.get(`http://localhost:3001/products/${product.product_code}/images`);
             
             if (imageResponse.data && imageResponse.data.length > 0) {
               // Assuming the API returns an array of image URLs
@@ -41,7 +41,7 @@ const SingleProduct = () => {
                 {product.image_urls.map((imageUrl, index) => (
                   <img
                     key={index}
-                    src={`http://admin.webpal/uploads/${imageUrl}`}
+                    src={`http://localhost:3000/uploads/${imageUrl}`}
                     alt={`${product.name} - ${index}`}
                     style={{ width: '50px', height: '50px' }}
                   />

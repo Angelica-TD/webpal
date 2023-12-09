@@ -22,7 +22,7 @@ const MoreDetailsModal = ({ product }) => {
                         {product.image_urls.map((imageUrl, index) => (
                           <img
                             key={index}
-                            src={`http://admin.webpal/uploads/${imageUrl}`}
+                            src={`http://localhost:3000/uploads/${imageUrl}`}
                             alt={`${product.name} - ${index}`}
                             style={{ width: '50px', height: '50px' }}
                           />
