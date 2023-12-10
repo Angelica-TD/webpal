@@ -33,3 +33,22 @@
     flex-direction: column;
     gap: 30px;
 }
+
+.product-details .row{
+    gap: 20px;
+}
+
+.product-quantity{
+    width: fit-content;
+}
+
+.product-quantity input{
+    border-radius: var(--bs-border-radius);
+}
+
+.modal-header{
+    position: absolute;
+    right: 0;
+    border-bottom: 0;
+    z-index: 99;
+}
